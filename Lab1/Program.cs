@@ -8,6 +8,7 @@ namespace Lab1
         {
             Console.Title = "Сахарова Елизавета ИУ5-32Б";
             Console.WriteLine("ax^4 + bx^2 + c = 0.\nВведите коэффициенты a, b, c биквадратного уравнения: ");
+
             Console.Write("a = ");
             double aCoefficient;
             while (!double.TryParse(Console.ReadLine(), out aCoefficient))
