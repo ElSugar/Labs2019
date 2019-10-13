@@ -64,7 +64,7 @@ namespace Lab1
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Уравнение не имеет корней.");
+                        Console.WriteLine("Уравнение не имеет действительных корней.");
                     }
                 }
                 else
@@ -74,7 +74,7 @@ namespace Lab1
                     if (rootT1 < 0 && rootT2 < 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Уравнение не имеет корней.");
+                        Console.WriteLine("Уравнение не имеет действительных корней.");
                     }
                     else
                     {
@@ -124,7 +124,7 @@ namespace Lab1
             {
                 if (bCoefficient != 0)
                 {
-                    double rootT = cCoefficient / bCoefficient;
+                    double rootT = -cCoefficient / bCoefficient;
                     Console.ForegroundColor = ConsoleColor.Green;
                     if (rootT == 0)
                     {
@@ -138,7 +138,7 @@ namespace Lab1
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Уравнение не имеет корней.");
+                    Console.WriteLine("Уравнение не составлено.");
                 }
             }
             Console.ReadLine();
