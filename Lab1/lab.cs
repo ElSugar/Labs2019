@@ -1,4 +1,8 @@
-п»їusing System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab1
 {
@@ -6,14 +10,14 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
-            Console.Title = "РЎР°С…Р°СЂРѕРІР° Р•Р»РёР·Р°РІРµС‚Р° РРЈ5-32Р‘";
-            Console.WriteLine("ax^4 + bx^2 + c = 0.\nР’РІРµРґРёС‚Рµ РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ a, b, c Р±РёРєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ: ");
+            Console.Title = "Сахарова Елизавета ИУ5-32Б";
+            Console.WriteLine("ax^4 + bx^2 + c = 0.\nВведите коэффициенты a, b, c биквадратного уравнения: ");
             Console.Write("a = ");
             double aCoefficient;
             while (!double.TryParse(Console.ReadLine(), out aCoefficient))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·.\n");
+                Console.Write("Неверный ввод данных. Попробуйте ещё раз.\n");
                 Console.ResetColor();
                 Console.Write("a = ");
             }
@@ -22,7 +26,7 @@ namespace Lab1
             while (!double.TryParse(Console.ReadLine(), out bCoefficient))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·.\n");
+                Console.Write("Неверный ввод данных. Попробуйте ещё раз.\n");
                 Console.ResetColor();
                 Console.Write("b = ");
             }
@@ -31,7 +35,7 @@ namespace Lab1
             while (!double.TryParse(Console.ReadLine(), out cCoefficient))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰С‘ СЂР°Р·.\n");
+                Console.Write("Неверный ввод данных. Попробуйте ещё раз.\n");
                 Console.ResetColor();
                 Console.Write("c = ");
             }
@@ -47,7 +51,7 @@ namespace Lab1
                 catch (Exception)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С….\n");
+                    Console.Write("Неверный ввод данных.\n");
                     Console.ResetColor();
                     return;
                 }
@@ -59,7 +63,7 @@ namespace Lab1
                 if (Discriminant < 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("РЈСЂР°РІРЅРµРЅРёРµ РЅРµ РёРјРµРµС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РєРѕСЂРЅРµР№."); 
+                    Console.WriteLine("Уравнение не имеет действительных корней."); 
                 }
                 else if (Discriminant == 0)
                 {
@@ -67,17 +71,17 @@ namespace Lab1
                     if (rootT > 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}.", Math.Sqrt(rootT), -Math.Sqrt(rootT));
+                        Console.WriteLine("Корни уравнения: {0}, {1}.", Math.Sqrt(rootT), -Math.Sqrt(rootT));
                     }
                     else if (rootT == 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("РљРѕСЂРµРЅСЊ СѓСЂР°РІРЅРµРЅРёСЏ: 0.");
+                        Console.WriteLine("Корень уравнения: 0.");
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("РЈСЂР°РІРЅРµРЅРёРµ РЅРµ РёРјРµРµС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РєРѕСЂРЅРµР№.");
+                        Console.WriteLine("Уравнение не имеет действительных корней.");
                     }
                 }
                 else
@@ -87,7 +91,7 @@ namespace Lab1
                     if (rootT1 < 0 && rootT2 < 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("РЈСЂР°РІРЅРµРЅРёРµ РЅРµ РёРјРµРµС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РєРѕСЂРЅРµР№.");
+                        Console.WriteLine("Уравнение не имеет действительных корней.");
                     }
                     else
                     {
@@ -96,37 +100,37 @@ namespace Lab1
                         {
                             if (rootT2 > 0)
                             {
-                                Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}, {2}, {3}.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1), Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
+                                Console.WriteLine("Корни уравнения: {0}, {1}, {2}, {3}.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1), Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
                             }
                             else if (rootT2 == 0)
                             {
-                                Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}, 0.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1));
+                                Console.WriteLine("Корни уравнения: {0}, {1}, 0.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1));
                             }
                             else
                             {
-                                Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1));
+                                Console.WriteLine("Корни уравнения: {0}, {1}.", Math.Sqrt(rootT1), -Math.Sqrt(rootT1));
                             }
                         }
                         else if (rootT1 == 0)
                         {
                             if (rootT2 > 0)
                             {
-                                Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: 0, {0}, {1}.", Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
+                                Console.WriteLine("Корни уравнения: 0, {0}, {1}.", Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
                             }
                             else
                             {
-                                Console.WriteLine("РљРѕСЂРµРЅСЊ СѓСЂР°РІРЅРµРЅРёСЏ: 0.");
+                                Console.WriteLine("Корень уравнения: 0.");
                             }
                         }
                         else if (rootT1 < 0)
                         {
                             if (rootT2 > 0)
                             {
-                                Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}.", Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
+                                Console.WriteLine("Корни уравнения: {0}, {1}.", Math.Sqrt(rootT2), -Math.Sqrt(rootT2));
                             }
                             else if (rootT2 == 0)
                             {
-                                Console.WriteLine("РљРѕСЂРµРЅСЊ СѓСЂР°РІРЅРµРЅРёСЏ: 0.");
+                                Console.WriteLine("Корень уравнения: 0.");
                             }
                         }
                     }
@@ -141,17 +145,17 @@ namespace Lab1
                     Console.ForegroundColor = ConsoleColor.Green;
                     if (rootT == 0)
                     {
-                        Console.WriteLine("РљРѕСЂРµРЅСЊ СѓСЂР°РІРЅРµРЅРёСЏ: 0.");
+                        Console.WriteLine("Корень уравнения: 0.");
                     }
                     else
                     {
-                        Console.WriteLine("РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ: {0}, {1}.", Math.Sqrt(rootT), -Math.Sqrt(rootT));
+                        Console.WriteLine("Корни уравнения: {0}, {1}.", Math.Sqrt(rootT), -Math.Sqrt(rootT));
                     }
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("РЈСЂР°РІРЅРµРЅРёРµ РЅРµ СЃРѕСЃС‚Р°РІР»РµРЅРѕ.");
+                    Console.WriteLine("Уравнение не составлено.");
                 }
             }
             Console.ResetColor();
