@@ -10,6 +10,7 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
+            Console.Title = "Сахарова Елизавета ИУ5-32Б";
             Rectangle _rectangle = new Rectangle(5, 4);
             Square _square = new Square(5);
             Circle _circle = new Circle(5);
