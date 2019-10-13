@@ -46,7 +46,7 @@ namespace Lab1
                 if (Discriminant < 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Уравнение не имеет действительных корней."); // действ?? не всегда
+                    Console.WriteLine("Уравнение не имеет действительных корней."); 
                 }
                 else if (Discriminant == 0)
                 {
