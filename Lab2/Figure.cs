@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab2
+﻿namespace Lab2
 {
     /// <summary>
     /// Geometric figure class
     /// </summary>
     abstract class Figure
     {
+        string _Type;
+
         /// <summary>
         /// Figure type
         /// </summary>
@@ -25,8 +21,7 @@ namespace Lab2
                 this._Type = value;
             }
         }
-        string _Type;
-
+        
         /// <summary>
         /// Figure area calculation
         /// </summary>
@@ -40,7 +35,8 @@ namespace Lab2
         /// <returns></returns>
         public override string ToString()
         {
-            return this.Type + " площадью " + this.Area().ToString();
+            return this.Type + " имеет площадь " + this.Area().ToString();
+            // this line return this.Type has an area equal to this.Area().ToString()
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab2
 {
@@ -11,12 +7,26 @@ namespace Lab2
         static void Main(string[] args)
         {
             Console.Title = "Сахарова Елизавета ИУ5-32Б";
-            Rectangle _rectangle = new Rectangle(5, 4);
-            Square _square = new Square(5);
-            Circle _circle = new Circle(5);
+            int a = 0, b = 0;
 
+            // Enter the sizes of the rectangle
+            Console.Write("Введите стороны прямоугольника:\na = ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("b = ");
+            b = int.Parse(Console.ReadLine());
+            Rectangle _rectangle = new Rectangle(a, b);
             _rectangle.Print();
+
+            // Enter the size of the square
+            Console.Write("\nВведите сторону квадрата:\na = ");
+            a = int.Parse(Console.ReadLine());
+            Square _square = new Square(a);
             _square.Print();
+
+            //Enter the radius of the circle
+            Console.Write("\nВведите радиус окружности:\nr = ");
+            a = int.Parse(Console.ReadLine());
+            Circle _circle = new Circle(a);
             _circle.Print();
 
             Console.ReadLine();
