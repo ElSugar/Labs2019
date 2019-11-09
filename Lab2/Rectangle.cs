@@ -25,6 +25,12 @@ namespace Lab2
             return _area;
         }
 
+        public override string ToString()
+        {
+            return this.Type + " имеет площадь " + this.Area().ToString();
+            // this line return this.Type has an area equal to this.Area().ToString()
+        }
+
         public void Print()
         {
             Console.WriteLine(this.ToString());

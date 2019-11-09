@@ -33,10 +33,11 @@
         /// Virtual method ToString override
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
+        /*public override string ToString()
         {
             return this.Type + " имеет площадь " + this.Area().ToString();
             // this line return this.Type has an area equal to this.Area().ToString()
         }
+        */
     }
 }
