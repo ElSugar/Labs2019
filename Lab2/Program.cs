@@ -7,26 +7,13 @@ namespace Lab2
         static void Main(string[] args)
         {
             Console.Title = "Сахарова Елизавета ИУ5-32Б";
-            int a = 0, b = 0;
-
-            // Enter the sizes of the rectangle
-            Console.Write("Введите стороны прямоугольника:\na = ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("b = ");
-            b = int.Parse(Console.ReadLine());
-            Rectangle _rectangle = new Rectangle(a, b);
+            Rectangle _rectangle = new Rectangle(3, 5);
             _rectangle.Print();
 
-            // Enter the size of the square
-            Console.Write("\nВведите сторону квадрата:\na = ");
-            a = int.Parse(Console.ReadLine());
-            Square _square = new Square(a);
+            Square _square = new Square(4);
             _square.Print();
 
-            //Enter the radius of the circle
-            Console.Write("\nВведите радиус окружности:\nr = ");
-            a = int.Parse(Console.ReadLine());
-            Circle _circle = new Circle(a);
+            Circle _circle = new Circle(2.0);
             _circle.Print();
 
             Console.ReadLine();

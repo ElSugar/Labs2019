@@ -1,6 +1,6 @@
 ﻿namespace Lab2
 {
-    interface IPrint
+    public interface IPrint
     {
         void Print();
     }

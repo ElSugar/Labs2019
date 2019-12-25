@@ -5,39 +5,36 @@
     /// </summary>
     abstract class Figure
     {
-        string _Type;
-
-        /// <summary>
-        /// Figure type
-        /// </summary>
         public string Type
         {
             get
             {
-                return this._Type;
+                return type;
             }
-            protected set
+            set
             {
-                this._Type = value;
+                this.type = value;
             }
         }
-        
-        /// <summary>
-        /// Figure area calculation
-        /// </summary>
-        public abstract double Area();
+        string type;
 
-        // Метод виртуальный, так как он объявлен в самом базовом классе object 
-        // поэтому чтобы его переопределить добавлено ключевое слово override
         /// <summary>
-        /// Virtual method ToString override
+        /// Вычисление площади фигуры
         /// </summary>
-        /// <returns></returns>
-        /*public override string ToString()
+        /// <returns>
+        /// Площадь фигуры - число с плавающей точкой
+        /// </returns>
+        public virtual double Area() { return 0.0; }
+
+        /// <summary>
+        /// Вывод информации о фигуре в формате: "{Название}: {Площадь} = {Значение}."
+        /// </summary>
+        /// <returns>
+        /// Возвращает строку string соответствующего формата
+        /// </returns>
+        public override string ToString()
         {
-            return this.Type + " имеет площадь " + this.Area().ToString();
-            // this line return this.Type has an area equal to this.Area().ToString()
+            return string.Format("{0}: Area = {1}.", this.Type, Area());
         }
-        */
     }
 }

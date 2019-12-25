@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5B4236F-8918-4282-BFF4-ECE44A0E6103}</ProjectGuid>
+    <ProjectGuid>{6BF2AB35-9869-4E89-B0CA-8A8E3BC982B1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lab2</RootNamespace>
-    <AssemblyName>Lab2</AssemblyName>
+    <RootNamespace>Lab3</RootNamespace>
+    <AssemblyName>Lab3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,9 @@
     <Compile Include="Circle.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="IPrint.cs" />
+    <Compile Include="SimpleListProject.cs" />
+    <Compile Include="SimpleStack.cs" />
+    <Compile Include="SparseMatrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
@@ -53,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
