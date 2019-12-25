@@ -8,30 +8,47 @@ namespace Lab3
 {
     class Rectangle : Figure, IPrint
     {
-        double height;
-        double width;
+        double height, width;
 
-        /// <summary>
-        /// The main constructor
-        /// </summary>
-        /// <param name="_height">Height</param>
-        /// <param name="_width">Width</param>
-        public Rectangle(double _height, double _width)
+        public double Width
         {
-            this.height = _height;
-            this.width = _width;
-            this.Type = "Прямоугольник";
+            get
+            {
+                return width;
+            }
+            set
+            {
+                width = (value > 0) ? value : 0;
+            }
+        }
+
+        public double Height
+        {
+            get
+            {
+                return height;
+            }
+            set
+            {
+                height = (value > 0) ? value : 0;
+            }
+        }
+
+        public Rectangle(double h, double w)
+        {
+            Width = w;
+            Height = h;
+            // this.Type = "Прямоугольник";
         }
 
         public override double Area()
         {
-            double _area = this.width * this.height;
-            return _area;
+            return width * height;
         }
 
         public override string ToString()
         {
-            return this.Type + " площадью " + this.Area().ToString();
+            return string.Format("Rectangle: Area = {0}.", Area());
         }
 
         public void Print()

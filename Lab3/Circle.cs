@@ -10,21 +10,31 @@ namespace Lab3
     {
         double radius;
 
+        public double Radius
+        {
+            get
+            {
+                return radius;
+            }
+            set
+            {
+                radius = value > 0 ? value : 0;
+            }
+        }
+
         public Circle(double _radius)
         {
-            this.radius = _radius;
-            this.Type = "Круг";
+            Radius = _radius;
         }
 
         public override double Area()
         {
-            double _area = Math.Pow(this.radius, 2) * Math.PI;
-            return _area;
+            return Math.PI * radius * radius;
         }
 
         public override string ToString()
         {
-            return this.Type + " площадью " + this.Area().ToString();
+            return string.Format("Circle: Area = {0}.", Area());
         }
 
         public void Print()

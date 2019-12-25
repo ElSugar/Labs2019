@@ -10,7 +10,11 @@ namespace Lab3
     {
         public Square(double size) : base(size, size)
         {
-            this.Type = "Квадрат";
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Square: Area = {0}.", Area());
         }
     }
 }
